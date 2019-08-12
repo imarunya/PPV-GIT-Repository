@@ -1,0 +1,97 @@
+
+/* Global Styles */
+html,body{margin:0;padding:0}
+body{font: 76% Arial, Verdana, serif, sans-serif; background-color:#white;}
+
+/* TEXT STYLES */
+p{padding:0 5px 0px; font-size: 1em; line-height: 1.3em; letter-spacing: 1px;}
+h1 { font-size: 2.5em; margin-top: 0;  text-transform:uppercase; letter-spacing: 1px;}
+h2 { font-size: 2em; color: #000; line-height: 1.3em; letter-spacing: -1px;}
+h3 { font-size: 1.2em; color: #000;}
+h4 { font-size: 1.2em; color: #000;}
+h5 { font-size: 1.2em; color:#000;}
+h6 { font-size: 1.2em; color: #000;}
+h1,h2;,h3,h4,h5 {padding-top:0 5px 0px;}
+#navigation p, #extra p {color:#fff;}
+a:link { color: #452; text-decoration:none; border-bottom: 1px solid #b71; padding:1px;}
+a:visited {color: #452; text-decoration:none; border-bottom: 1px solid #b71; }
+a:hover {background-color: #79B30B; color:#fff; }
+acronym {border-bottom: 1px dotted #b71; cursor:help; } 
+label.header {font-size:larger; color: #b71; font-weight:bold; text-transform:uppercase; margin-bottom: 0; padding-bottom:0; } 
+   /* label.header is the label for the search box but can be used for other forms by using class="header" in a label */
+form,submit { padding:0; margin:0; } /* removes extraneous padding around the form */
+code { border: 1px dotted #b71; border-left: 3px solid #b71; background-color: #dda; padding: 1em; margin-left: 3ex; color:#742;}
+blockquote { border: 1px solid #b71; background-color: #dda;  margin: 3ex; font-style:italic;}
+
+
+
+
+
+
+input[type="radio"] {
+  margin-top: -1px;
+  vertical-align: middle;
+}
+
+/* HEADER SECTION */
+div#header {margin:0; padding:0; background: transparent url(images/grass_sm.jpg) no-repeat right center; height:8em;}
+
+
+
+div#header h1 a { height: 3em; min-height:8em; line-height:80px;margin:0; color: #fff; border-bottom: none; padding:0;}
+div#header h1 a:hover {background-color: transparent; border-bottom: none; color: #79B30B}
+div#header p#skip{position: absolute; top: 3px; right: 3px; margin:0; padding: 0;}
+#skip a,#skip a:visited {color:#fff; border-bottom: 1px solid #b71;}
+
+/* CONTENT SECTION */
+div#wrapper{float:left;width:100%;}
+div#content{margin: 0 200px; padding-bottom: 2em; background-color: #fff; color: #fff;}
+div#content p{line-height:1.4;}
+div#content h2#topper {background:#dda; color:#742; margin-top:0; padding-top:0;}
+div#content a:visited {color: #452; text-decoration:none; border-bottom: 1px solid #b71; }
+
+/* VERTICAL NAVIGATION */
+div#navigation{float:left; width:200px;margin-left:-100%; color:#fff;margin-top:0%;}
+.navcontainer { width: 198px; border-right: 1px solid #fff; padding:0; margin-bottom: 1em; 
+background-color: transparent;}
+.navcontainer ul { list-style: none; margin-top:-60px; padding: 0; border: none; width: 198px; min-width:198px; }
+.navcontainer li { margin: 0; }
+html>body .navcontainer li a { width: auto;}
+.navcontainer li a,.navcontainer li a:visited { 
+          display: block; padding: 5px 5px 5px 0.5em; border-left: 10px solid #993399;
+          border-right: 10px solid #993399; background-color: #663399  ; 
+          text-decoration: none; font-weight:bold; width: 167px; min-width:165px; 
+          color: #fff; border-bottom: 1px solid #fff; 
+}
+.navcontainer li a:hover { 
+          border-left: 10px solid #993399; border-right: 10px solid #993399; 
+          background-color: solid #993399; color: #fff; font-weight:bold;
+}
+.navcontainer  li.menutitle {border-left: 10px solid #993399; .navcontainer li#active ul li { display: block;}; border-right:10px solid #993399;  font-size:larger;
+text-align:center; color: #b71; font-weight:bold; padding-bottom:1ex; border-bottom:none; text-transform:uppercase;}
+.navcontainer li#last a { border-bottom:none;}  /* the last one in the list should get the id of 'last' in the list to remove the bottom border */
+
+
+
+
+
+/* --- These are the subnavigation for sublinks. --- */
+.navcontainer li ul li { display:none;} /* this hides all sublinks if it is not the currently active link */
+.navcontainer li#active ul li { display: block;} /* this expands all sublinks if it is the currently active link */
+.navcontainer li#active ul li a:link, .navcontainer li#active ul li a:visited { border-left-color:#DA70D6; border-right-color: #DA70D6; background-color: #9400D3; padding: 5px 0 5px 11px;}
+.navcontainer li#active ul li a:hover { background-color:#fff; color: #DA70D6;}
+
+/* EXTRA SECTION */
+div#extra {float:left;width:198px;margin-left:-200px; background-color: #000; border-left: 2px solid #000;}
+
+/* RIGHT AFFILIATE LINKS BOX */
+ul#affiliate { border:1px solid #79B30B; margin:0; padding:0; margin-right: 20px; margin-left: 5px; padding: 3px 4px 4px 6px; background-color:#452; list-style-type:none; }
+ul#affiliate li { padding: 3px;}
+ul#affiliate li a:link, a:visited { color:#fff;}
+
+/* FOOTER SECTION */
+div#footer{clear:left;width:100%; background-color:#DA70D6;color: #FFF}
+div#footer a:link, div#footer a:visited { color:#fff; }
+div#footer ul {list-style-type:none; margin:0; padding:.8em 0; text-align:center;}
+div#footer ul li {display:inline; padding: 0 4px;}
+

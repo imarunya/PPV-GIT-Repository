@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PPVTool.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>PPV TOOL</title>
+    <link rel="stylesheet" href="Content/styles.css" type="text/css" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body xmlns:ksj1="urn:http://schemas.ksjControls.com/ASPNET" ms_positioning="GridLayout">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #efe7f7;
+        }
+         .topnav a {
+                    float: right;
+                    display: block;
+                    vertical-align: top;
+                    color: #efe7f7;
+                    text-align: right;
+                    padding: 20px 24px;
+                    text-decoration: none;
+                    font-size: 30px;
+                }
+
+                .topnav a {
+                    background-color: #efe7f7;
+                    color: #663399;
+                }
+
+        .auto-style1 {
+            height: 79px;
+        }
+    </style>
+    <form runat="server">
+        <table border="0" style="width: 100%; border-spacing: 0px; margin: 0 auto;">
+            <tr>
+                <td colspan="2" class="auto-style1">
+                    <div class="topnav">
+                          <asp:Image ID="Image1"  runat="server" ImageUrl="~/Images/capture.png" style="width:200px; height:auto;"/>
+                        <a class="active">PPV TOOL</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 10%; vertical-align: top;">
+                    <div id="container">
+                        <div id="header">
+                            <h1><a href="#"></a></h1>
+                            <p id="skip"><a href="#content"></a></p>
+                        </div>
+                        <div id="wrapper">
+                            <!-- Main content section -->
+                            <h2 id="topper"></h2>
+                        </div>
+                    </div>
+                    <div id="navigation">
+                        <!-- Menu section -->
+                        <div class="navcontainer">
+                            <ul class="navlist">
+                                <li class="menutitle"></li>
+                                <li id="active">
+                                    
+                                    <ul>
+                                        <!--window.location.href='three.html'-->
+                                        <li><a href="../DataCreation/CreateTestData.aspx">Create test data</a></li>
+                                        <li><a href="../DataCreation/frmBatch1.aspx">Run test data</a></li>
+                                        <li><a href="../UploadData/frmMediator.aspx">Analysis of test data</a></li>
+                                        <li><a href="../PrintData/frmPrintData.aspx">Print test data</a></li>
+                                        <li><a href="../MaintRefData.aspx">Reference data</a></li>
+                                        <li><a href="../PrintMaintRefData.aspx">Run Query</a></li>
+                                        <li><a href="#">Upload to Mainframe</a></li>                                  
+                                        <li><a href="#">Download from Mainframe</a></li>
+                                        <li><a href="../Logout.aspx">Logout</a></li>                                      
+                                    </ul>
+                                    <asp:Button Text="Click to Upload" runat="server" ID="uploadMainframe" ForeColor ="Red" onclick="uploadMainframe_Click"/>
+                                     <asp:Button Text="Click to Download" runat="server" ID="DownloadMainframe" ForeColor ="Red" onclick="DownloadMainframe_Click"/>
+                                </li>
+                                <asp:Label Text="" runat="server" ID ="labelerror" ForeColor="Green" />
+                            </ul>
+                        </div>
+
+                    </div>
+                </td>
+                <td style="width: 100%;">
+                    <div style="width: 100%; height: 350px;">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
